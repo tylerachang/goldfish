@@ -21,7 +21,7 @@ Each Goldfish model is 125M parameters at the largest, which can easily be run o
 @article{chang-etal-2024-goldfish,
   title={Goldfish: Monolingual Language Models for 350 Languages},
   author={Chang, Tyler A. and Arnett, Catherine and Tu, Zhuowen and Bergen, Benjamin K.},
-  journal={Preprint}
+  journal={Preprint},
   year={2024},
 }
 </pre>
