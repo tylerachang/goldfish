@@ -1,4 +1,4 @@
-# Goldfish: Monolingual language models for 350 languages
+# Goldfish: Monolingual Language Models for 350 Languages
 
 <b>Goldfish</b> is a suite of 1154 <b>monolingual</b> language models trained for <b>350 languages</b>.
 The models are trained on 5MB, 10MB, 100MB, and 1GB of text in each language when available, after accounting for the fact that some languages require more UTF-8 bytes than others to encode comparable text.
@@ -12,8 +12,6 @@ Google Colab demo [here](https://colab.research.google.com/drive/1rHFpnQsyXJ32ON
 
 For training and evaluations details, see our paper, [Goldfish: Monolingual Language Models for 350 Languages (Chang et al., 2024)](https://github.com/tylerachang/goldfish/blob/main/goldfish_paper_20240815.pdf).
 In the current repository, we include the original training and evaluation code, dataset and evaluation info (`data` directory), and model details (`model_details.json`).
-See `data` for 
-The available Goldfish languages are listed in `constants.py`.
 
 To use the Goldfish models, we recommend using the models available on Hugging Face: https://huggingface.co/goldfish-models
 
