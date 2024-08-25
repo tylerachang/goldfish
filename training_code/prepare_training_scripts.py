@@ -32,6 +32,10 @@ MODELS_OUTDIR = 'models'
 DATASETS_DIR = 'tokenized_data_split'
 TOKENIZERS_DIR = 'tokenizers/monolingual'
 MAX_BATCH_PER_DEVICE = 8  # How many fit on one device.
+
+# A tsv mapping model to training token count, e.g.:
+# dataset   tokens
+# eng_latn_1000mb   213977088
 TRAIN_SIZES_TOKENS_PATH = 'goldfish-models/train_sizes_tokens.tsv'
 
 
