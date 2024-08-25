@@ -5,6 +5,10 @@ Print the log-probability of the target text given the input text using a
 specified Goldfish model. We call the model without additional wrappers to
 demonstrate usage. Uses log base e.
 
+Note: Goldfish models are trained with a [CLS] (same as [BOS]) token prepended,
+and a [SEP] (same as [EOS]) token separating sequences. For best results, we
+make sure that [CLS] is prepended to the input sequence.
+
 Sample usage:
 python3 goldfish/example_score_text.py \
 --model="eng_latn_1000mb" \
@@ -32,6 +36,7 @@ def score_text(model, tokenizer, input_text, target_text):
     input_tokens = tokenizer([input_text], add_special_tokens=False)['input_ids'][0]
     target_tokens = tokenizer([target_text], add_special_tokens=False)['input_ids'][0]
     sequence_tokens = input_tokens + target_tokens
+    # Prepend [CLS] to input sequence, to match training format.
     sequence_tokens.insert(0, tokenizer.cls_token_id)  # Start token.
     assert len(sequence_tokens) <= MAX_SEQ_LEN
     sequence_tokens = torch.tensor([sequence_tokens])
